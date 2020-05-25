@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>Dash Example</title>
+  </head>
+
+  <body bgcolor="#FFFFFF">  
+    <video id="videoPlayer" controls></video>
+
+    <script src="dash.js"></script>
+    <script>
+      (function(){
+      var url = "http://127.0.0.1:8080/stream/stream_1/index.mpd";
+      var player = dashjs.MediaPlayer().create();
+      player.initialize(document.querySelector("#videoPlayer"), url, true);
+      })();
+    </script>
+  </body>
+</html>
